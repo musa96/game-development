@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameDev Canvas Tutorial</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0 auto;            
+        }
+        canvas {
+            background: #ccc;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas" width="400" height="600"></canvas>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.rect(150,220,100,150);
+        ctx.fillStyle = "#FEEFFF";
+        ctx.fill();
+        ctx.closePath();
+
+        // Creating a circle
+        ctx.beginPath();
+        ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+
+        // Creating our second circle
+        ctx.beginPath();
+        ctx.arc(140, 100, 60, 0, Math.PI*2, false)
+        ctx.fillStyle = "blue";
+        ctx.fill();
+        ctx.closePath();
+        
+        // Creating our third circle without a fill
+        ctx.beginPath();
+        ctx.arc(340, 160, 50, 0, Math.PI*2, false);
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+        ctx.closePath();
+
+        // Creating a rectangle without a fill
+        ctx.beginPath();
+        ctx.rect(150, 400, 90, 170);
+        ctx.strokeStyle = "teal";
+        ctx.stroke();
+        ctx.closePath();
+
+        // Creating a rectangle with a fill
+        ctx.beginPath();
+        ctx.rect(10, 170, 120, 50);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+        ctx.closePath();
+
+        // creating a fourth rectangle without a fill
+        ctx.beginPath();
+        ctx.rect(300, 400, 90, 130);
+        ctx.strokeStyle = "magenta";
+        ctx.stroke();
+        ctx.closePath();
+    </script>
+</body>
+</html>

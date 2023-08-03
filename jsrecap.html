@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Recap</title>
+</head>
+<body>
+    <p id="paragraph"></p>
+    <p id="paragraph2"></p>
+    <p id="paragraph3"></p>
+    <script>
+        // Function with 2 parameters
+        // An addition function.
+        function addition(a, b)
+        {
+            return a + b;
+        }
+
+        // A multiplication function.
+        function multiply(a, b)
+        {
+            return a * b;
+        }
+
+        var a = 4;
+        var b = 3;
+        var c = 10;
+        var total = (a * b) + c;
+        document.getElementById("paragraph").innerHTML = "The sum total is " + total;
+        document.getElementById("paragraph2").innerHTML = "The sum total is " + addition(7, 3);
+        document.getElementById("paragraph3").innerHTML = "The sum total is " + multiply(5, 5);
+    </script>
+</body>
+</html>
